@@ -8,6 +8,11 @@
 import SwiftUI
 
 struct ListView: View {
+
+    // MARK Stored Properties
+@State var todoItems: [Todoitem] = existingToDoItems
+    
+    @State var newitemDescription: String = ""
     
     // MARK Computed Properties
     var body: some View {
