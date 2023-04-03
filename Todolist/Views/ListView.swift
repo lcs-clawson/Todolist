@@ -28,19 +28,13 @@ struct ListView: View {
                 }
                 .padding(20)
                 
-                List {
+                List(existingToDoItems) { currentItem in
                     
                     }
                     }
                 }
             }
         }
-
-
-
-
-
-
 
 
 struct ListView_Previews: PreviewProvider {
