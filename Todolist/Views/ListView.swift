@@ -46,6 +46,7 @@ struct ListView: View {
                 .padding(20)
                 
                 List(todoItems) {currentItem in
+                    
                     Label(title: {
                         Text(currentItem.description)
                     }, icon: {
