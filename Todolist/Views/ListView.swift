@@ -23,14 +23,29 @@ struct ListView: View {
                 
                 HStack {
                     
-                    TextField("Enter a to-do item", text: Binding.constant(""))
+                    TextField("Enter a to-do item", text: $newitemDescription)
                     
                     Button(action: {
-                    }, label: {
+                        let lastID = todoItems.last!.id
+                        
+                        let newID = lastID + 1
+                        
+                        let newToDoItem = Todoitem(id: newID, description: newitemDescription, completed: false)
+                        
+                        todoItems.append(newToDoItem)
+                        
+                        newitemDescription = ""
+                    
+                                            
+                        }, label: {
                         Text("ADD")
                             .font(.caption)
                     })
                 }
+                
+                
+                
+                
                 .padding(20)
                 
                 List(existingToDoItems) { currentItem in
