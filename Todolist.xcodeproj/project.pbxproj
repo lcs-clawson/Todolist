@@ -14,6 +14,7 @@
 		367CE3E129DB5CE400CAED35 /* TodoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 367CE3E029DB5CE400CAED35 /* TodoItem.swift */; };
 		367CE3E429DDAAAF00CAED35 /* db.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 367CE3E329DDAAAF00CAED35 /* db.sqlite */; };
 		367CE3E729DDAB1A00CAED35 /* Blackbird in Frameworks */ = {isa = PBXBuildFile; productRef = 367CE3E629DDAB1A00CAED35 /* Blackbird */; };
+		367CE3EA29DDAB9400CAED35 /* AppDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 367CE3E929DDAB9400CAED35 /* AppDatabase.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		367CE3DE29DB5A0500CAED35 /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
 		367CE3E029DB5CE400CAED35 /* TodoItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoItem.swift; sourceTree = "<group>"; };
 		367CE3E329DDAAAF00CAED35 /* db.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = db.sqlite; sourceTree = "<group>"; };
+		367CE3E929DDAB9400CAED35 /* AppDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDatabase.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,8 +89,17 @@
 			children = (
 				367CE3E329DDAAAF00CAED35 /* db.sqlite */,
 				367CE3E029DB5CE400CAED35 /* TodoItem.swift */,
+				367CE3E829DDAB6C00CAED35 /* Helpers */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		367CE3E829DDAB6C00CAED35 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				367CE3E929DDAB9400CAED35 /* AppDatabase.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -170,6 +181,7 @@
 			files = (
 				367CE3D029DB59A800CAED35 /* TodolistApp.swift in Sources */,
 				367CE3E129DB5CE400CAED35 /* TodoItem.swift in Sources */,
+				367CE3EA29DDAB9400CAED35 /* AppDatabase.swift in Sources */,
 				367CE3DF29DB5A0500CAED35 /* ListView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
