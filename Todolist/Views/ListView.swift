@@ -5,12 +5,17 @@
 //  Created by Cooper Lawson on 2023-04-03.
 //
 
+import Blackbird
 import SwiftUI
 
 struct ListView: View {
 
     // MARK Stored Properties
-@State var todoItems: [Todoitem] = existingToDoItems
+    
+    @BlackbirdLiveModels ({ db in
+        try await Todoitem.read(from: db)
+    }) var todoItems
+    
     
     @State var newitemDescription: String = ""
     
