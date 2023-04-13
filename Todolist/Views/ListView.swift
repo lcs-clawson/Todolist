@@ -9,6 +9,9 @@ import Blackbird
 import SwiftUI
 
 struct ListView: View {
+    
+    
+    @Environment (\.blackbirdDatabase) var db: Blackbird.Database?
 
     // MARK Stored Properties
     
@@ -40,7 +43,12 @@ struct ListView: View {
 //                        todoItems.append(newToDoItem)
 //
 //                        newitemDescription = ""
-                        
+                        Task {
+                            try await db!.transaction { core in
+                                try core.query("INSERT INTO TodoItem (description) VALUES (?)", newitemDescription)
+                            }
+                            newitemDescription = ""
+                        }
                         
                     }, label: {
                         Text("ADD")
