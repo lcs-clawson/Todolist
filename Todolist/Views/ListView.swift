@@ -61,8 +61,17 @@ struct ListView: View {
                             Image (systemName: "circle")
                         }
                     })
+                    .onTapGesture {
+                        Task {
+                            try await db!.transaction { core in
+                                
+                                try core.query("UPDATE ToDoItem SET completed set = (?) WHERE id = (?)",
+                                !currentItem.completed,
+                                currentItem.id)
+                            }
+                        }
+                    }
                 }
-                
             }
             .navigationTitle("To do")
             
